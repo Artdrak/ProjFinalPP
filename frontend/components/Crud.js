@@ -1,6 +1,6 @@
 'use client';
 import { useEffect, useState } from 'react';
-const API = process.env.NEXT_PUBLIC_API || 'http://localhost:3001';
+import { API } from '../lib/api';
 
 // tela usada por todos os cadastros
 export default function Crud({ titulo, rota, campos }) {
