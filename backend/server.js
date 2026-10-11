@@ -73,4 +73,6 @@ crud('laboratorios', { ...recurso, fixo: { Tipo: 'L' } });
 crud('salas', { ...recurso, fixo: { Tipo: 'S' } });
 crud('status', { tabela: 'Status', campos: { Descricao: sql.VarChar(30) }, listar: '*', obrig: ['Descricao'] });
 
+require('./reservas')(app, pool, pronto, tratar);
+
 app.listen(3001, () => console.log('API rodando em http://localhost:3001'));
